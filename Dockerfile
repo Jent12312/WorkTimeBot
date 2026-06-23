@@ -44,7 +44,7 @@ FROM debian:12-slim
 WORKDIR /app
 
 # Устанавливаем сертификаты (нужны для HTTPS-запросов к Telegram API)
-RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y ca-certificates tzdata && rm -rf /var/lib/apt/lists/*
 
 # Копируем скомпилированный бинарник из builder stage
 COPY --from=builder /app/build/WorkTimeBot /app/WorkTimeBot
