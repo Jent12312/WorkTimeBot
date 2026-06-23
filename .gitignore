@@ -1,0 +1,26 @@
+# Сборка
+build/
+cmake-build-*/
+out/
+
+# vcpkg
+vcpkg_installed/
+.vcpkg/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# База данных (создаётся при запуске)
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# OS
+.DS_Store
+Thumbs.db
